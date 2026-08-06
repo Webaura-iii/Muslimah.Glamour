@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muslimah.Glamour by Anusha</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#795465",
+            "on-primary": "#ffffff",
+            "primary-container": "#f8c8dc",
+            "on-primary-container": "#765162",
+            "secondary": "#755a23",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#fdd894",
+            "on-secondary-container": "#785d25",
+            "secondary-fixed": "#ffdea5",
+            "tertiary": "#70585b",
+            "tertiary-container": "#eccdd0",
+            "tertiary-fixed": "#fbdbde",
+            "background": "#fbf9f6",
+            "on-background": "#1b1c1a",
+            "surface": "#fbf9f6",
+            "surface-bright": "#fbf9f6",
+            "surface-dim": "#dbdad7",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3f0",
+            "surface-container": "#efeeeb",
+            "surface-container-high": "#eae8e5",
+            "surface-container-highest": "#e4e2df",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#4f4448",
+            "outline": "#817478",
+            "outline-variant": "#d2c3c7",
+          },
+          borderRadius: {
+            'DEFAULT': '1rem',
+            'lg': '2rem',
+            'xl': '3rem',
+            'full': '9999px'
+          },
+          fontFamily: {
+            'headline-display': ['Playfair Display', 'serif'],
+            'headline-lg': ['Playfair Display', 'serif'],
+            'headline-md': ['Playfair Display', 'serif'],
+            'body-lg': ['Montserrat', 'sans-serif'],
+            'body-md': ['Montserrat', 'sans-serif'],
+            'body-sm': ['Montserrat', 'sans-serif'],
+            'label-lg': ['Montserrat', 'sans-serif'],
+            'label-md': ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      overscroll-behavior: none;
+      font-family: 'Montserrat', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .font-serif-headline {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Custom Floating & Glowing Logo Styles */
+    .hero-logo {
+      width: 220px;
+      max-width: 70vw;
+      height: auto;
+      animation: float 4s ease-in-out infinite,
+                 glow 3s ease-in-out infinite alternate;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    /* Hover Effect */
+    .hero-logo:hover {
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Glow Animation */
+    @keyframes glow {
+      0% {
+        filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.4));
+      }
+      50% {
+        filter: drop-shadow(0 0 18px rgba(255, 105, 180, 0.8));
+      }
+      100% {
+        filter: drop-shadow(0 0 8px rgba(255, 182, 193, 0.5));
+      }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-container flex flex-col min-h-screen">
+
+  <header class="fixed top-0 left-0 w-full z-[100] bg-surface/95 backdrop-blur-md shadow-sm border-b border-primary-container/20">
+    
+    <div class="bg-gradient-to-r from-primary-container via-tertiary-fixed to-primary-container py-1.5 sm:py-2 text-center w-full px-3 sm:px-4">
+      <p class="font-label-md text-on-primary-container text-[10px] sm:text-xs tracking-wider uppercase font-semibold leading-tight">
+        ✨ Pan India Shipping Available | 3k+ Happy Customers & Counting!
+      </p>
+    </div>
+
+    <div class="w-full px-3 sm:px-6 lg:px-8 h-14 sm:h-18 lg:h-20 flex items-center justify-between gap-2 sm:gap-4 max-w-7xl mx-auto">
+      
+      <a href="#" class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <img 
+          alt="Muslimah.Glamour Logo" 
+          class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover shadow-sm ring-2 ring-primary-container" 
+          src="https://i.ibb.co/0Vht0snY/Logo.png"
+        >
+        <span class="font-serif-headline text-base sm:text-xl lg:text-2xl text-primary font-bold tracking-tight whitespace-nowrap">Muslimah.Glamour</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 flex-1">
+        <a class="px-3 py-2 font-label-lg text-primary text-sm font-semibold transition-all hover:text-primary/80" href="#">Home</a>
+        <a class="px-3 py-2 font-label-lg text-primary text-sm font-semibold transition-all hover:text-primary/80" href="#about">About Anusha</a>
+        <a class="px-3 py-2 font-label-lg text-primary text-sm font-semibold transition-all hover:text-primary/80" href="#essentials">Curated Essentials</a>
+        <a class="px-3 py-2 font-label-lg text-primary text-sm font-semibold transition-all hover:text-primary/80" href="#community">Community</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <a 
+          href="https://instagram.com/muslimah.glamour" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="text-on-surface-variant hover:text-primary transition-colors p-1.5 sm:p-2 rounded-full hover:bg-primary-container/30 flex items-center justify-center"
+          title="Instagram Page"
+        >
+          <span class="material-symbols-outlined text-lg sm:text-2xl">photo_camera</span>
+        </a>
+
+        <a 
+          href="https://youtube.com/@muslimah.glamour?feature=shared" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="text-on-surface-variant hover:text-primary transition-colors p-1.5 sm:p-2 rounded-full hover:bg-primary-container/30 flex items-center justify-center"
+          title="YouTube Channel"
+        >
+          <span class="material-symbols-outlined text-lg sm:text-2xl">play_circle</span>
+        </a>
+
+        <a 
+          href="https://wa.me/message/UBIUMGNPWMH3I1" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="bg-secondary text-on-secondary px-3 sm:px-5 py-2 rounded-lg font-label-lg text-[11px] sm:text-xs md:text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-1.5 sm:gap-2 font-semibold whitespace-nowrap"
+        >
+          <span class="material-symbols-outlined text-sm sm:text-[18px]">chat</span>
+          <span class="hidden xs:inline">Orders & Inquiries</span>
+          <span class="xs:hidden">Orders</span>
+        </a>
+
+        <button 
+          id="mobileMenuBtn"
+          onclick="toggleMobileMenu()"
+          class="lg:hidden p-1.5 text-on-surface-variant hover:text-primary focus:outline-none"
+          aria-label="Toggle navigation"
+        >
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div id="mobileOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[105] hidden lg:hidden transition-opacity" onclick="closeMobileMenu()"></div>
+
+  <aside id="mobileMenu" class="fixed top-0 right-0 w-64 sm:w-80 h-full bg-surface z-[110] shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between p-6">
+    
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-outline-variant/20">
+        <div class="flex items-center gap-2">
+          <img 
+            alt="Muslimah.Glamour Logo" 
+            class="w-7 h-7 rounded-full object-cover ring-2 ring-primary-container" 
+            src="https://i.ibb.co/nq2wpPxB/logo1.png"
+          >
+          <span class="font-serif-headline text-lg text-primary font-bold">Menu</span>
+        </div>
+        <button onclick="closeMobileMenu()" class="p-1 text-on-surface-variant hover:text-primary focus:outline-none" aria-label="Close menu">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 pt-6">
+        <a class="py-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-3 border-b border-surface-container/60" href="#" onclick="closeMobileMenu()">
+          <span class="material-symbols-outlined text-lg">home</span> Home
+        </a>
+        <a class="py-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-3 border-b border-surface-container/60" href="#about" onclick="closeMobileMenu()">
+          <span class="material-symbols-outlined text-lg">person</span> About Anusha
+        </a>
+        <a class="py-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-3 border-b border-surface-container/60" href="#essentials" onclick="closeMobileMenu()">
+          <span class="material-symbols-outlined text-lg">auto_awesome</span> Curated Essentials
+        </a>
+        <a class="py-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-3" href="#community" onclick="closeMobileMenu()">
+          <span class="material-symbols-outlined text-lg">groups</span> Community
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-outline-variant/20 space-y-4">
+      <p class="font-label-md text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Connect</p>
+      <div class="flex items-center gap-3">
+        <a href="https://instagram.com/muslimah.glamour" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary-container/30 rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-xl">photo_camera</span>
+        </a>
+        <a href="https://youtube.com/@muslimah.glamour?feature=shared" target="_blank" rel="noopener noreferrer" class="p-2 bg-primary-container/30 rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-xl">play_circle</span>
+        </a>
+        <a href="https://wa.me/message/UBIUMGNPWMH3I1" target="_blank" rel="noopener noreferrer" class="p-2 bg-secondary-container/40 rounded-full text-secondary hover:bg-secondary hover:text-white transition-colors">
+          <span class="material-symbols-outlined text-xl">chat</span>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <main class="pt-[80px] sm:pt-[105px] flex-1">
+    <div class="flex flex-col w-full">
+
+      <section class="relative min-h-[75vh] sm:min-h-[85vh] flex items-center justify-center px-4 sm:px-8 py-12 sm:py-20 bg-cover bg-[position:85%_center] sm:bg-center overflow-hidden" 
+               style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0FyK2Ymw8aFmX2ijiHBjFjwTLrW07xlmDxdyOY6Dx82nJtGJhOpNL90jJiHw1ef0LlG4eOpxWtIDXpyP-Csm98lGx2e2el0vLsqkb3AqLPAiNnf6lcpUxYDfKgjkTz3QhYkiRhXKb0j53x7FwT4jpBVHlUKraw0BCnUi17On64vyfNRgnCY7Gtk78aVg1kxbgh0beIOzFX325YkU3rnmW1vdFpT1yangh7HTb1LJGBkH35XVNhyeaDQ');">
+        
+        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/30 sm:from-black/80 sm:via-black/60 sm:to-black/40 backdrop-blur-[1px]"></div>
+
+        <div class="max-w-6xl mx-auto relative z-10 w-full text-left flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="shrink-0 flex items-center justify-center py-4 md:py-0">
+          </div>
+          <div class="max-w-xl space-y-3.5 sm:space-y-6 mr-auto">
+            <img src="https://i.ibb.co/nq2wpPxB/logo1.png" alt="Muslimah Glamour Logo" class="hero-logo" style="max-width: 220px; width: 100%; height: auto; margin-top: 0;">
+            
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-2.5 sm:px-4 py-1 rounded-full border border-white/30 shadow-sm">
+              <span class="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-secondary-fixed"></span>
+              </span>
+              <span class="font-label-md text-[9px] sm:text-xs text-white uppercase tracking-[0.15em] sm:tracking-[0.2em] font-semibold">New Collection Live</span>
+            </div>
+
+            <h1 class="font-serif-headline text-2xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.15] font-bold drop-shadow-md">
+              Elevate Your <br class="hidden sm:inline">
+              <span class="italic text-secondary-fixed font-normal">Modest Style</span>
+            </h1>
+
+            <p class="font-body-md text-xs sm:text-base lg:text-lg text-white/90 leading-relaxed max-w-md sm:max-w-xl">
+              Discover handcrafted anti-tarnish jewellery, premium hijabs, and curated gift sets meticulously selected by <span class="text-secondary-fixed font-semibold">Anusha</span> for the modern Muslimah.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-start gap-2 sm:gap-4 pt-1 sm:pt-2">
+              <a 
+                href="https://wa.me/message/UBIUMGNPWMH3I1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="bg-primary text-on-primary px-3.5 py-2 sm:px-7 sm:py-3.5 rounded-full font-label-lg text-[11px] sm:text-sm shadow-xl hover:shadow-primary/30 transition-all inline-flex items-center justify-center gap-1.5 sm:gap-3 font-semibold w-auto"
+              >
+                <span>Orders & Inquiries</span>
+                <span class="material-symbols-outlined text-sm sm:text-lg">chat</span>
+              </a>
+              
+              <a 
+                href="https://instagram.com/muslimah.glamour" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-3.5 py-2 sm:px-7 sm:py-3.5 rounded-full font-label-lg text-[11px] sm:text-sm shadow-md hover:bg-white/20 transition-all inline-flex items-center justify-center gap-1.5 font-semibold w-auto"
+              >
+                <span class="material-symbols-outlined text-sm sm:text-lg">photo_camera</span>
+                <span>Instagram</span>
+              </a>
+
+              <a 
+                href="https://whatsapp.com/channel/0029Vb6mbeLJuyAIpXWT842U" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-3.5 py-2 sm:px-7 sm:py-3.5 rounded-full font-label-lg text-[11px] sm:text-sm shadow-md hover:bg-white/20 transition-all inline-flex items-center justify-center gap-1.5 font-semibold w-auto"
+              >
+                <span class="material-symbols-outlined text-sm sm:text-lg">campaign</span>
+                <span>Channel</span>
+              </a>
+            </div>
+
+            <div class="flex items-center justify-start gap-2.5 sm:gap-4 pt-2 sm:pt-3">
+              <div class="flex -space-x-2 sm:-space-x-3">
+                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-full border-2 border-surface bg-primary-container flex items-center justify-center text-[8px] sm:text-[10px] font-bold text-on-primary-container">AJ</div>
+                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-full border-2 border-surface bg-secondary-container flex items-center justify-center text-[8px] sm:text-[10px] font-bold text-on-secondary-container">MF</div>
+                <div class="w-6 h-6 sm:w-9 sm:h-9 rounded-full border-2 border-surface bg-tertiary-container flex items-center justify-center text-[8px] sm:text-[10px] font-bold text-primary">SK</div>
+              </div>
+              <p class="font-label-md text-[11px] sm:text-sm text-white/90">Joined by <span class="text-secondary-fixed font-bold">3,000+</span> sisters</p>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+      </section>
+
+      <section class="bg-secondary-container/40 py-3 sm:py-4 border-y border-secondary-fixed/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-2.5 text-center sm:text-left">
+          <p class="font-label-lg text-xs sm:text-sm text-on-secondary-container flex items-center justify-center sm:justify-start gap-2 font-medium">
+            <span class="material-symbols-outlined text-secondary text-base sm:text-lg">stars</span>
+            Join our exclusive VIP WhatsApp Community for early drops & special pricing!
+          </p>
+          <a 
+            href="https://chat.whatsapp.com/EWHqDzVRU1L4UajJ0rAQfw" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="bg-on-secondary-container text-white px-4 py-1.5 sm:py-2 rounded-full font-label-md text-xs flex items-center gap-1.5 hover:scale-105 transition-transform font-semibold shrink-0 shadow-sm"
+          >
+            <span class="material-symbols-outlined text-sm sm:text-base">group_add</span>
+            VIP WhatsApp Community
+          </a>
+        </div>
+      </section>
+
+      <section id="essentials" class="py-10 sm:py-16 px-4 sm:px-8 bg-surface-bright">
+        <div class="max-w-6xl mx-auto">
+          
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-3">
+            <div class="space-y-1.5">
+              <h2 class="font-serif-headline text-2xl sm:text-3xl lg:text-4xl text-on-surface font-semibold">Curated Essentials</h2>
+              <p class="font-body-md text-xs sm:text-sm text-on-surface-variant max-w-md">Every piece is handpicked to ensure the perfect blend of modesty, comfort, and timeless glamour.</p>
+            </div>
+            <div class="flex gap-2 shrink-0">
+              <div class="h-1.5 w-8 sm:w-10 bg-primary rounded-full"></div>
+              <div class="h-1.5 w-2.5 sm:w-3 bg-primary/20 rounded-full"></div>
+              <div class="h-1.5 w-2.5 sm:w-3 bg-primary/20 rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-primary-container/20">
+              <div class="aspect-[4/3] sm:aspect-[3/4] overflow-hidden">
+                <img 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  alt="Stack of premium chiffon and jersey hijabs" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuADindQUY-QWK9nZ1yq5_y2f7S88fnMX7bySfRf807VTbxzm-hzgzKV0pOe3ZkOozClFfIzHyXdtNZQsAK5JhAlmSjVNeJ5maq-pEJnDysqwUL7DoIwR8gENI6azmeTGbdY5O1Fy1BJkc8E9w0netmYPNRL8RMEV_g_pfvfAjV49ZVPHf4POGcxHZtGZRoRaZQKN_pg3b2JMk-WcZqG6GO7UYJbOiimB9Ix9J-tjCEyMUyEmz_NJak-AA"
+                >
+              </div>
+              <div class="p-5 sm:p-6 bg-white relative z-10 flex-1 flex flex-col justify-between space-y-4">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="font-serif-headline text-lg sm:text-xl text-primary font-semibold">Premium Hijabs</h3>
+                      <p class="font-label-md text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Styling & Fabrics</p>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary">stylus_note</span>
+                  </div>
+                  <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Breathable fabrics and custom color combos designed for all-day comfort and grace.</p>
+                </div>
+                <a 
+                  href="https://wa.me/message/UBIUMGNPWMH3I1" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-2 text-primary font-label-lg text-xs font-semibold group-hover:gap-3 transition-all pt-1"
+                >
+                  Inquire Styles <span class="material-symbols-outlined text-sm">east</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-primary-container/20">
+              <div class="aspect-[4/3] sm:aspect-[3/4] overflow-hidden">
+                <img 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  alt="Gold anti-tarnish jewelry with American Diamond accent" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqG4DoBqUYJZrB9lzs0TmEPEcA6o7NFwShua8Pgfd8oW83-hFnKw2sG8dhIQttZ4vfHf_ZsjFX5YaOhcRvUbE_z8c6h2saqxo0wz3_Tn2WM1iZC7Y_WKxnOFfuzMYv-SfkUrH6SWZ0FPZ2z696tOCnz1bLPBbeMdE5KMRimVsypTJsF_KzlK5PSFdJhbOfpNScLPSX4SuBdWGR2cTNeijXNnqTBez6pNoHloV3K-e6xcfKua9w6sM6vA"
+                >
+              </div>
+              <div class="p-5 sm:p-6 bg-white relative z-10 flex-1 flex flex-col justify-between space-y-4">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="font-serif-headline text-lg sm:text-xl text-primary font-semibold">Fine Jewellery</h3>
+                      <p class="font-label-md text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Anti-Tarnish & AD Suite</p>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary">diamond</span>
+                  </div>
+                  <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Handcrafted American Diamond and anti-tarnish gold pieces that stay bright as your spirit.</p>
+                </div>
+                <a 
+                  href="https://wa.me/message/UBIUMGNPWMH3I1" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-2 text-primary font-label-lg text-xs font-semibold group-hover:gap-3 transition-all pt-1"
+                >
+                  View Collection <span class="material-symbols-outlined text-sm">east</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="group relative flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-primary-container/20">
+              <div class="aspect-[4/3] sm:aspect-[3/4] overflow-hidden">
+                <img 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  alt="Luxury gift box unboxing" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRVtvN6E925AzOBE7UwtaIOpScu0NDUCn8ClZfM8pSXEsm1wLSr6IPu4I6cqkTSB4FhjF9gBp5Hci4w_mt8ifQHbmSCrfEoeSQd7fantvoUuRORGw1r9BVd9XsedfLYrcZU5otgzNdlPlDoZxFrDEYxy6UvKgGpAqBn5k_pWPB12aQl5BK21p53rELFqEwRoVgC9a6Fsl8dytLol7tP_gc9N75URO9np9b1_qLgy9aYVcyzu-CJrVeiw"
+                >
+              </div>
+              <div class="p-5 sm:p-6 bg-white relative z-10 flex-1 flex flex-col justify-between space-y-4">
+                <div class="space-y-2">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="font-serif-headline text-lg sm:text-xl text-primary font-semibold">Gifting & Custom</h3>
+                      <p class="font-label-md text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Aesthetic Hampers</p>
+                    </div>
+                    <span class="material-symbols-outlined text-secondary">card_giftcard</span>
+                  </div>
+                  <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">Curated unboxing experiences designed to make your loved ones feel truly special.</p>
+                </div>
+                <a 
+                  href="https://wa.me/message/UBIUMGNPWMH3I1" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-2 text-primary font-label-lg text-xs font-semibold group-hover:gap-3 transition-all pt-1"
+                >
+                  Build a Custom Box <span class="material-symbols-outlined text-sm">east</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-10 sm:py-16 px-4 sm:px-8 bg-background">
+        <div class="max-w-6xl mx-auto">
+          
+          <div class="bg-surface-container-low rounded-2xl sm:rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden flex flex-col lg:flex-row items-center gap-8 border border-outline-variant/30">
+            <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+            
+            <div class="flex-1 space-y-4 text-center sm:text-left">
+              <div class="inline-block px-3 py-1 bg-secondary-container/60 text-on-secondary-container rounded-full font-label-md text-[10px] uppercase tracking-widest font-semibold">
+                @ THE DIGITAL EXTENSION
+              </div>
+              <h2 class="font-serif-headline text-2xl sm:text-3xl text-on-surface font-semibold">Hello, I'm Anusha</h2>
+              <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Muslimah.Glamour was born out of a passion for high-quality, accessible, and modest fashion essentials. From curating non-slip hijab fabrics to handcrafting durable anti-tarnish AD jewellery, my goal is to make every woman feel confident and elegant.<br><br>
+                Through <strong class="text-primary"><a href="https://www.instagram.com/mg.digital08/" target="_blank" rel="noopener noreferrer">@mg.digital08</a></strong>, I also share digital styling insights, dispatch vlogs, and behind-the-scenes glimpses into building a modern modest fashion brand.
+              </p>
+              
+              <div class="flex justify-center sm:justify-start gap-8 pt-2">
+                <div>
+                  <p class="font-serif-headline text-xl sm:text-2xl text-primary font-bold">15k+</p>
+                  <p class="font-label-md text-[10px] sm:text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Community</p>
+                </div>
+                <div class="border-l border-outline-variant/40 h-8 sm:h-10"></div>
+                <div>
+                  <p class="font-serif-headline text-xl sm:text-2xl text-primary font-bold">500+</p>
+                  <p class="font-label-md text-[10px] sm:text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Resources</p>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a 
+                  href="https://youtube.com/@muslimah.glamour?feature=shared" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-2 text-on-surface font-label-lg text-xs sm:text-sm border-b-2 border-on-surface pb-0.5 hover:text-primary hover:border-primary transition-all font-semibold"
+                >
+                  <span>Watch Content on YouTube</span>
+                  <span class="material-symbols-outlined text-base">north_east</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="relative shrink-0">
+              <div class="bg-white p-3 rounded-2xl shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div class="w-48 sm:w-56 h-60 sm:h-72 bg-surface-container-highest rounded-xl flex flex-col items-center justify-center gap-3 p-4 text-center border border-primary-container/20">
+                  <span class="material-symbols-outlined text-primary/50 text-5xl">smartphone</span>
+                  <p class="font-body-md text-xs text-on-surface-variant font-medium">Digital Creator & Brand Masterclasses</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 sm:mt-20 text-center max-w-2xl mx-auto space-y-4 px-2">
+            <span class="material-symbols-outlined text-secondary/30 text-4xl sm:text-5xl leading-none">format_quote</span>
+            <p class="font-serif-headline text-base sm:text-xl text-on-surface italic leading-relaxed font-normal">
+              "My mission is simple: to prove that modesty is not about hiding, but about choosing what you show the world. It is the ultimate form of self-respect and the purest expression of glamour."
+            </p>
+            <div class="flex flex-col items-center gap-2 pt-2">
+              <img 
+                src="https://i.ibb.co/0Vht0snY/Logo.png" 
+                alt="Anusha" 
+                class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-primary-container p-0.5 shadow-sm"
+              >
+              <div>
+                <p class="font-label-lg text-xs sm:text-sm text-on-surface font-bold">Anusha</p>
+                <p class="font-label-md text-[10px] text-on-surface-variant uppercase tracking-widest font-semibold">Founder, Muslimah.Glamour</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="community" class="py-10 sm:py-16 px-4 sm:px-8 bg-surface-container-low/50 border-t border-primary-container/20">
+        <div class="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8">
+          <div class="space-y-1.5">
+            <h2 class="font-serif-headline text-2xl sm:text-3xl lg:text-4xl text-on-surface font-semibold">Join Our Channels</h2>
+            <p class="font-body-md text-xs sm:text-sm text-on-surface-variant max-w-md mx-auto">Stay up to date with new arrivals, styling tutorials, and exclusive community discounts.</p>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 max-w-5xl mx-auto">
+            
+            <a 
+              href="https://instagram.com/muslimah.glamour" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="bg-white p-3.5 sm:p-4 rounded-xl shadow-sm hover:shadow-md border border-primary-container/30 flex flex-col items-center gap-2 transition-all hover:-translate-y-1 group"
+            >
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-base sm:text-lg">photo_camera</span>
+              </div>
+              <div>
+                <p class="font-label-lg text-xs sm:text-sm text-on-surface font-semibold">Instagram Page 📸</p>
+                <p class="font-body-sm text-[10px] sm:text-[11px] text-on-surface-variant">Daily Styling & Reels</p>
+              </div>
+            </a>
+
+            <a 
+              href="https://wa.me/message/UBIUMGNPWMH3I1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="bg-white p-3.5 sm:p-4 rounded-xl shadow-sm hover:shadow-md border border-primary-container/30 flex flex-col items-center gap-2 transition-all hover:-translate-y-1 group"
+            >
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-primary-container/40 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-base sm:text-lg">chat</span>
+              </div>
+              <div>
+                <p class="font-label-lg text-xs sm:text-sm text-on-surface font-semibold">Orders & Inquiries 💬</p>
+                <p class="font-body-sm text-[10px] sm:text-[11px] text-on-surface-variant">Direct Assistance</p>
+              </div>
+            </a>
+
+            <a 
+              href="https://chat.whatsapp.com/EWHqDzVRU1L4UajJ0rAQfw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="bg-white p-3.5 sm:p-4 rounded-xl shadow-sm hover:shadow-md border border-secondary-container/40 flex flex-col items-center gap-2 transition-all hover:-translate-y-1 group"
+            >
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-base sm:text-lg">groups</span>
+              </div>
+              <div>
+                <p class="font-label-lg text-xs sm:text-sm text-on-surface font-semibold">VIP Community</p>
+                <p class="font-body-sm text-[10px] sm:text-[11px] text-on-surface-variant">Exclusive Member Drops</p>
+              </div>
+            </a>
+
+            <a 
+              href="https://whatsapp.com/channel/0029Vb6mbeLJuyAIpXWT842U" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="bg-white p-3.5 sm:p-4 rounded-xl shadow-sm hover:shadow-md border border-primary-container/30 flex flex-col items-center gap-2 transition-all hover:-translate-y-1 group"
+            >
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-tertiary-container/50 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-base sm:text-lg">campaign</span>
+              </div>
+              <div>
+                <p class="font-label-lg text-xs sm:text-sm text-on-surface font-semibold">WhatsApp Channel</p>
+                <p class="font-body-sm text-[10px] sm:text-[11px] text-on-surface-variant">Broadcast Updates</p>
+              </div>
+            </a>
+
+            <a 
+              href="https://youtube.com/@muslimah.glamour?feature=shared" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="col-span-2 lg:col-span-1 bg-white p-3.5 sm:p-4 rounded-xl shadow-sm hover:shadow-md border border-primary-container/30 flex flex-col items-center gap-2 transition-all hover:-translate-y-1 group w-full xs:w-3/4 sm:w-1/2 lg:w-full mx-auto"
+            >
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-red-100 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-base sm:text-lg">play_circle</span>
+              </div>
+              <div>
+                <p class="font-label-lg text-xs sm:text-sm text-on-surface font-semibold">YouTube Channel</p>
+                <p class="font-body-sm text-[10px] sm:text-[11px] text-on-surface-variant">Tutorials & Vlogs</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10 sm:py-16 px-4 sm:px-8 overflow-hidden">
+        <div class="max-w-5xl mx-auto bg-primary rounded-2xl sm:rounded-3xl p-6 sm:p-12 relative overflow-hidden text-center text-on-primary shadow-xl">
+          <div class="relative z-10 max-w-xl mx-auto space-y-4 sm:space-y-6">
+            <h2 class="font-serif-headline text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+              Ready to Bloom in <br> Modesty & Grace?
+            </h2>
+            <p class="font-body-lg text-xs sm:text-sm text-on-primary/90 leading-relaxed">
+              Join our mailing list for exclusive early access to new collections and styling tips from Anusha.
+            </p>
+
+            <form class="flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Welcome to the Glamour Club! ✨')">
+              <input 
+                class="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/30 text-white placeholder:text-white/70 focus:outline-none focus:bg-white/20 transition-all font-body-md text-xs sm:text-sm" 
+                placeholder="Your Email Address" 
+                type="email" 
+                required
+              >
+              <button 
+                class="bg-on-primary text-primary px-6 py-3 rounded-full font-label-lg text-xs sm:text-sm font-bold hover:scale-105 transition-transform shadow-md shrink-0" 
+                type="submit"
+              >
+                Join Now
+              </button>
+            </form>
+
+            <p class="font-label-md text-[10px] sm:text-xs text-on-primary/70 flex items-center justify-center gap-1.5 pt-1">
+              <span class="material-symbols-outlined text-sm">lock</span>
+              Secure Shopping & Pan-India Shipping
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="bg-surface-container py-10 sm:py-12 border-t border-outline-variant/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+        
+        <div class="space-y-2.5">
+          <h4 class="font-serif-headline text-lg sm:text-xl text-primary font-bold">Muslimah.Glamour</h4>
+          <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+            Crafting elegance with modesty. Join our community of 3000+ happy customers across India.
+          </p>
+        </div>
+
+        <div class="space-y-2.5">
+          <h5 class="font-label-lg text-xs text-on-surface uppercase tracking-widest font-bold">Connect With Us</h5>
+          <div class="flex flex-col gap-1.5 font-body-sm text-xs text-on-surface-variant">
+            <a class="hover:text-primary transition-colors" href="https://instagram.com/muslimah.glamour" target="_blank" rel="noopener noreferrer">Instagram Page</a>
+            <a class="hover:text-primary transition-colors" href="https://wa.me/message/UBIUMGNPWMH3I1" target="_blank" rel="noopener noreferrer">Orders & Inquiries</a>
+            <a class="hover:text-primary transition-colors" href="https://whatsapp.com/channel/0029Vb6mbeLJuyAIpXWT842U" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a>
+            <a class="hover:text-primary transition-colors" href="https://chat.whatsapp.com/EWHqDzVRU1L4UajJ0rAQfw" target="_blank" rel="noopener noreferrer">VIP WhatsApp Community</a>
+            <a class="hover:text-primary transition-colors" href="https://youtube.com/@muslimah.glamour?feature=shared" target="_blank" rel="noopener noreferrer">YouTube Channel</a>
+          </div>
+        </div>
+
+        <div class="space-y-2.5 sm:col-span-2 md:col-span-1">
+          <h5 class="font-label-lg text-xs text-on-surface uppercase tracking-widest font-bold">Partnerships</h5>
+          <div class="flex flex-col gap-1.5 font-body-sm text-xs text-on-surface-variant">
+            <a class="hover:text-primary transition-colors" href="https://wa.me/message/UBIUMGNPWMH3I1" target="_blank" rel="noopener noreferrer">Collaboration Inquiry</a>
+            <a class="hover:text-primary transition-colors" href="https://wa.me/message/UBIUMGNPWMH3I1" target="_blank" rel="noopener noreferrer">Bulk Orders</a>
+            <a class="hover:text-primary transition-colors" href="#">Shipping & Delivery Policy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-outline-variant/30 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+        <p class="font-body-sm text-[11px] sm:text-xs text-on-surface-variant/80">
+          © 2024 Muslimah.Glamour by Anusha. All Rights Reserved.
+        </p>
+        <div class="flex items-center gap-3 text-on-surface-variant">
+          <span class="material-symbols-outlined text-base sm:text-lg">favorite</span>
+          <span class="material-symbols-outlined text-base sm:text-lg">payments</span>
+          <span class="material-symbols-outlined text-base sm:text-lg">verified_user</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('mobileOverlay');
+      
+      menu.classList.toggle('translate-x-full');
+      overlay.classList.toggle('hidden');
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('mobileOverlay');
+      
+      menu.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
